@@ -30,8 +30,8 @@
         </property>
     </bean>
     <bean id="helloWorld" class="com.latch.sw.domain.HelloWorld">
-       <property name="message" value="Hello World!"/>
-   </bean>
+        <property name="message" value="${spring.msg}"/>
+    </bean>
     
     
     

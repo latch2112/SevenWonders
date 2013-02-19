@@ -5,7 +5,6 @@
 package com.latch.sw.main;
 
 import com.latch.sw.domain.HelloWorld;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
