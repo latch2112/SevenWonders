@@ -5,6 +5,7 @@
 package com.latch.sw.domain.interfaces;
 
 import java.util.List;
+import java.util.Properties;
 
 /**
  *
@@ -15,9 +16,10 @@ import java.util.List;
 public interface IDeck {
     
     public void shuffle();
-    public void load();
+    public void load() throws Exception;
     public List<ICard> getDeck();
     public void setDeck(List<ICard> ICardlst);
+    public IHand getHand(Properties props) throws Exception;
     
     
     
