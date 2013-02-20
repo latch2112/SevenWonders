@@ -1,0 +1,30 @@
+{
+    "swDeck":[{
+        "name":"Atelier",
+        "type":"Scientifique",
+        "cost":["verre"],
+        "freeChain":null,
+        "chainProduction":["Laboratoire","Champs de Tir"],
+        "config":3,
+        "age":"1",
+        "action":"sc.Appliquee+1"
+    },{
+        "name":"Officine",
+        "type":"Scientifique",
+        "cost":["tissu"],
+        "freeChain":null,
+        "chainProduction":["Écuries","Dipensaire"],
+        "config":3,
+        "age":"1",
+        "action":"sc.Pure+1"
+    }, {
+        "name":"Scriptorium",
+        "type":"Scientifique",
+        "cost":["papyrus"],
+        "freeChain":null,
+        "chainProduction":["Tribunal","Bibliothèque"],
+        "config":4,
+        "age":"1",
+        "action":"sc.Humaine+1"
+    }]
+    }

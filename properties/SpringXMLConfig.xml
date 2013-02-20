@@ -29,7 +29,7 @@
             <value>SevenWonders.properties</value>
         </property>
     </bean>
-    <bean id="helloWorld" class="com.latch.sw.domain.HelloWorld">
+    <bean id="helloWorld" class="com.latch.sw.domain.impl.HelloWorld">
         <property name="message" value="${spring.msg}"/>
     </bean>
     

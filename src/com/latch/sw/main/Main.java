@@ -4,10 +4,19 @@
  */
 package com.latch.sw.main;
 
-import com.latch.sw.domain.HelloWorld;
+import com.esotericsoftware.kryo.Kryo;
+import com.esotericsoftware.kryo.io.Output;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.latch.sw.domain.impl.HelloWorld;
+import com.latch.sw.domain.impl.SevenWondersCard;
+import com.latch.sw.domain.impl.SevenWondersDeck;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -36,6 +45,9 @@ public class Main {
         obj.getMessage();
         log.info("Exiting the program");
         log.info("properties msg="+System.getProperty("sw.msg"));
+        main.testKryo();
+        main.testJackson();
+        main.testJacksonRead();
     }
     private String propFileName;
  
@@ -58,6 +70,62 @@ public class Main {
         }
 
 
+    }
+    public void testKryo() throws FileNotFoundException {
+        Kryo kryo = new Kryo();
+        Output output = new Output(new FileOutputStream("file.bin"));
+        SevenWondersCard swCard = new SevenWondersCard();
+        swCard.setAction("sc.Appliquee+1");
+        swCard.setAge("1");
+        swCard.setConfig(3);
+        swCard.addCost("Verre");
+        swCard.addChainProduction("Laboratoire");
+        swCard.addChainProduction("Champs de Tir");
+        swCard.setType("Scientifique");
+        swCard.setName("Atelier");
+        kryo.writeObject(output, swCard);
+        output.close();
+        
+
+        
+        
+        
+    }
+    public void testJackson() throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        SevenWondersCard swCard = new SevenWondersCard();
+        swCard.setAction("sc.Appliquee+1");
+        swCard.setAge("1");
+        swCard.setConfig(3);
+        swCard.addCost("verre");
+        swCard.addChainProduction("Laboratoire");
+        swCard.addChainProduction("Champs de Tir");
+        swCard.setType("Scientifique");
+        swCard.setName("Atelier");
+        SevenWondersDeck swDeck = new SevenWondersDeck();
+        swDeck.addSwCardToDeck(swCard);
+        swCard = new SevenWondersCard();
+        swCard.setAction("sc.Pure+1");
+        swCard.setAge("1");
+        swCard.setConfig(3);
+        swCard.addCost("tissu");
+        swCard.addChainProduction("Écuries");
+        swCard.addChainProduction("Dipensaire");
+        swCard.setType("Scientifique");
+        swCard.setName("Officine");
+        swDeck.addSwCardToDeck(swCard);
+        log.info("\nswDeck = "+swDeck);
+        mapper.writeValue(new File("swCard.json"), swDeck);
+        
+        
+    }
+    
+    public void testJacksonRead() throws IOException  {
+        ObjectMapper mapper = new ObjectMapper();
+        SevenWondersDeck swDeck = mapper.readValue(new File("swDeck.json"), SevenWondersDeck.class);
+        log.info("\nswDeck = "+swDeck);
+        
+        
     }
     
     
