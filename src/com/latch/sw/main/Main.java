@@ -122,7 +122,7 @@ public class Main {
     
     public void testJacksonRead() throws IOException  {
         ObjectMapper mapper = new ObjectMapper();
-        SevenWondersDeck swDeck = mapper.readValue(new File("swDeck.json"), SevenWondersDeck.class);
+        SevenWondersDeck swDeck = mapper.readValue(new File("resources/swDeck.json"), SevenWondersDeck.class);
         log.info("\nswDeck = "+swDeck);
         
         
