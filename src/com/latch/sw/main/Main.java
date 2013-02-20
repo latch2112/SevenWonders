@@ -45,8 +45,8 @@ public class Main {
         obj.getMessage();
         log.info("Exiting the program");
         log.info("properties msg="+System.getProperty("sw.msg"));
-        main.testKryo();
-        main.testJackson();
+        //main.testKryo();
+        //main.testJackson();
         main.testJacksonRead();
     }
     private String propFileName;
@@ -123,7 +123,8 @@ public class Main {
     public void testJacksonRead() throws IOException  {
         ObjectMapper mapper = new ObjectMapper();
         SevenWondersDeck swDeck = mapper.readValue(new File("resources/swDeck.json"), SevenWondersDeck.class);
-        log.info("\nswDeck = "+swDeck);
+        log.info("swDeck = \n"+swDeck);
+        log.info("Total Card in the deck is "+swDeck.getSwDeck().size());
         
         
     }

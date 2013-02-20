@@ -1,7 +1,7 @@
 {
     "swDeck":[{
         "name":"Atelier",
-        "type":"Scientifique",
+        "type":"Bâtiments Scientifiques",
         "cost":["verre"],
         "freeChain":null,
         "chainProduction":["Laboratoire","Champs de Tir"],
@@ -10,7 +10,7 @@
         "action":"sc.Appliquee+1"
     },{
         "name":"Atelier",
-        "type":"Scientifique",
+        "type":"Bâtiments Scientifiques",
         "cost":["verre"],
         "freeChain":null,
         "chainProduction":["Laboratoire","Champs de Tir"],
@@ -19,7 +19,7 @@
         "action":"sc.Appliquee+1"
     },{
         "name":"Officine",
-        "type":"Scientifique",
+        "type":"Bâtiments Scientifiques",
         "cost":["tissu"],
         "freeChain":null,
         "chainProduction":["Écuries","Dipensaire"],
@@ -28,7 +28,7 @@
         "action":"sc.Pure+1"
     },{
         "name":"Officine",
-        "type":"Scientifique",
+        "type":"Bâtiments Scientifiques",
         "cost":["tissu"],
         "freeChain":null,
         "chainProduction":["Écuries","Dipensaire"],
@@ -37,21 +37,408 @@
         "action":"sc.Pure+1"
     },{
         "name":"Scriptorium",
-        "type":"Scientifique",
+        "type":"Bâtiments Scientifiques",
         "cost":["papyrus"],
         "freeChain":null,
         "chainProduction":["Tribunal","Bibliothèque"],
         "config":4,
         "age":"1",
         "action":"sc.Humaine+1"
-    }, {
+    },{
         "name":"Scriptorium",
-        "type":"Scientifique",
+        "type":"Bâtiments Scientifiques",
         "cost":["papyrus"],
         "freeChain":null,
         "chainProduction":["Tribunal","Bibliothèque"],
         "config":3,
         "age":"1",
         "action":"sc.Humaine+1"
+    },{
+        "name":"Verrerie",
+        "type":"Produits Manufacturés",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"verre+1"
+    },{
+        "name":"Verrerie",
+        "type":"Produits Manufacturés",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":6,
+        "age":"1",
+        "action":"verre+1"
+    },{
+        "name":"Métier à Tisser",
+        "type":"Produits Manufacturés",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"tissu+1"
+    },{
+        "name":"Métier à Tisser",
+        "type":"Produits Manufacturés",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":6,
+        "age":"1",
+        "action":"tissu+1"
+    },{
+        "name":"Presse",
+        "type":"Produits Manufacturés",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"papyrus+1"
+    },{
+        "name":"Presse",
+        "type":"Produits Manufacturés",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":6,
+        "age":"1",
+        "action":"papyrus+1"
+    },{
+        "name":"Cavité",
+        "type":"Matières Premières",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"pierre+1"
+    },{
+        "name":"Cavité",
+        "type":"Matières Premières",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":5,
+        "age":"1",
+        "action":"pierre+1"
+    },{
+        "name":"Filon",
+        "type":"Matières Premières",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"minerai+1"
+    },{
+        "name":"Filon",
+        "type":"Matières Premières",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":4,
+        "age":"1",
+        "action":"minerai+1"
+    },{
+        "name":"Bassin Argileux",
+        "type":"Matières Premières",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"argile+1"
+    },{
+        "name":"Bassin Argileux",
+        "type":"Matières Premières",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":5,
+        "age":"1",
+        "action":"argile+1"
+    },{
+        "name":"Chantier",
+        "type":"Matières Premières",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"bois+1"
+    },{
+        "name":"Chantier",
+        "type":"Matières Premières",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":4,
+        "age":"1",
+        "action":"bois+1"
+    },{
+        "name":"Exploitation Forestière",
+        "type":"Matières Premières",
+        "cost":["gold-1"],
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"pierre+1OUbois+1"
+    },{
+        "name":"Fosse Argileuse",
+        "type":"Matières Premières",
+        "cost":["gold-1"],
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"argile+1OUminerai+1"
+    },{
+        "name":"Excavation",
+        "type":"Matières Premières",
+        "cost":["gold-1"],
+        "freeChain":null,
+        "chainProduction":null,
+        "config":4,
+        "age":"1",
+        "action":"pierre+1OUargile+1"
+    },{
+        "name":"Gisement",
+        "type":"Matières Premières",
+        "cost":["gold-1"],
+        "freeChain":null,
+        "chainProduction":null,
+        "config":5,
+        "age":"1",
+        "action":"bois+1OUminerai+1"
+    },{
+        "name":"Friche",
+        "type":"Matières Premières",
+        "cost":["gold-1"],
+        "freeChain":null,
+        "chainProduction":null,
+        "config":6,
+        "age":"1",
+        "action":"bois+1OUargile+1"
+    },{
+        "name":"Mine",
+        "type":"Matières Premières",
+        "cost":["gold-1"],
+        "freeChain":null,
+        "chainProduction":null,
+        "config":6,
+        "age":"1",
+        "action":"pierre+1OUminerai+1"
+    },{
+        "name":"Caserne",
+        "type":"Bâtiments Militaires",
+        "cost":["minerai"],
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"bouclier+1"
+    },{
+        "name":"Caserne",
+        "type":"Bâtiments Militaires",
+        "cost":["minerai"],
+        "freeChain":null,
+        "chainProduction":null,
+        "config":5,
+        "age":"1",
+        "action":"bouclier+1"
+    },{
+        "name":"Tour de Garde",
+        "type":"Bâtiments Militaires",
+        "cost":["argile"],
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"bouclier+1"
+    },{
+        "name":"Tour de Garde",
+        "type":"Bâtiments Militaires",
+        "cost":["argile"],
+        "freeChain":null,
+        "chainProduction":null,
+        "config":4,
+        "age":"1",
+        "action":"bouclier+1"
+    },{
+        "name":"Palissade",
+        "type":"Bâtiments Militaires",
+        "cost":["bois"],
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"bouclier+1"
+    },{
+        "name":"Palissade",
+        "type":"Bâtiments Militaires",
+        "cost":["bois"],
+        "freeChain":null,
+        "chainProduction":null,
+        "config":7,
+        "age":"1",
+        "action":"bouclier+1"
+    },{
+        "name":"Théâtre",
+        "type":"Bâtiments Civils",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":["Statue"],
+        "config":3,
+        "age":"1",
+        "action":"victoire+2"
+    },{
+        "name":"Théâtre",
+        "type":"Bâtiments Civils",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":["Statue"],
+        "config":6,
+        "age":"1",
+        "action":"victoire+2"
+    },{
+        "name":"Autel",
+        "type":"Bâtiments Civils",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":["Temple"],
+        "config":3,
+        "age":"1",
+        "action":"victoire+2"
+    },{
+        "name":"Autel",
+        "type":"Bâtiments Civils",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":["Temple"],
+        "config":5,
+        "age":"1",
+        "action":"victoire+2"
+    },{
+        "name":"Bains",
+        "type":"Bâtiments Civils",
+        "cost":["pierre"],
+        "freeChain":null,
+        "chainProduction":["Aqueduc"],
+        "config":3,
+        "age":"1",
+        "action":"victoire+3"
+    },{
+        "name":"Bains",
+        "type":"Bâtiments Civils",
+        "cost":["pierre"],
+        "freeChain":null,
+        "chainProduction":["Aqueduc"],
+        "config":7,
+        "age":"1",
+        "action":"victoire+3"
+    },{
+        "name":"Prêteur sur Gages",
+        "type":"Bâtiments Civils",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"victoire+3"
+    },{
+        "name":"Prêteur sur Gages",
+        "type":"Bâtiments Civils",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":7,
+        "age":"1",
+        "action":"victoire+3"
+    },{
+        "name":"Comptoir Ouest",
+        "type":"Bâtiments Commerciaux",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":["Forum"],
+        "config":3,
+        "age":"1",
+        "action":"commerceMPGauche-1"
+    },{
+        "name":"Comptoir Ouest",
+        "type":"Bâtiments Commerciaux",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":["Forum"],
+        "config":7,
+        "age":"1",
+        "action":"commerceMPGauche-1"
+    },{
+        "name":"Comptoir Est",
+        "type":"Bâtiments Commerciaux",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":["Forum"],
+        "config":3,
+        "age":"1",
+        "action":"commerceMPDroite-1"
+    },{
+        "name":"Comptoir Est",
+        "type":"Bâtiments Commerciaux",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":["Forum"],
+        "config":7,
+        "age":"1",
+        "action":"commerceMPDroite-1"
+    },{
+        "name":"Marché",
+        "type":"Bâtiments Commerciaux",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":["Caravansérail"],
+        "config":3,
+        "age":"1",
+        "action":"commerceMM-1"
+    },{
+        "name":"Marché",
+        "type":"Bâtiments Commerciaux",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":["Caravansérail"],
+        "config":6,
+        "age":"1",
+        "action":"commerceMM-1"
+    },{
+        "name":"Taverne",
+        "type":"Bâtiments Commerciaux",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":3,
+        "age":"1",
+        "action":"gold+5"
+    },{
+        "name":"Taverne",
+        "type":"Bâtiments Commerciaux",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":4,
+        "age":"1",
+        "action":"gold+5"
+    },{
+        "name":"Taverne",
+        "type":"Bâtiments Commerciaux",
+        "cost":null,
+        "freeChain":null,
+        "chainProduction":null,
+        "config":7,
+        "age":"1",
+        "action":"gold+5"
     }]
     }

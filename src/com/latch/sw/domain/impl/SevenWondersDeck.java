@@ -39,7 +39,7 @@ public class SevenWondersDeck implements IDeck {
 
     @Override
     public String toString() {
-        return "SevenWondersDeck{" + "swDeck=" + swDeck + '}';
+        return "SevenWondersDeck{" + "swDeck=\n" + swDeck + '}';
     }
 
     @Override
