@@ -4,8 +4,7 @@
  */
 package com.latch.sw.main;
 
-import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.io.Output;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.latch.sw.domain.impl.HelloWorld;
 import com.latch.sw.domain.impl.SevenWondersCard;
@@ -45,7 +44,7 @@ public class Main {
         obj.getMessage();
         log.info("Exiting the program");
         log.info("properties msg="+System.getProperty("sw.msg"));
-        //main.testKryo();
+        
         //main.testJackson();
         main.testJacksonRead();
     }
@@ -71,26 +70,7 @@ public class Main {
 
 
     }
-    public void testKryo() throws FileNotFoundException {
-        Kryo kryo = new Kryo();
-        Output output = new Output(new FileOutputStream("file.bin"));
-        SevenWondersCard swCard = new SevenWondersCard();
-        swCard.setAction("sc.Appliquee+1");
-        swCard.setAge("1");
-        swCard.setConfig(3);
-        swCard.addCost("Verre");
-        swCard.addChainProduction("Laboratoire");
-        swCard.addChainProduction("Champs de Tir");
-        swCard.setType("Scientifique");
-        swCard.setName("Atelier");
-        kryo.writeObject(output, swCard);
-        output.close();
-        
-
-        
-        
-        
-    }
+    
     public void testJackson() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         SevenWondersCard swCard = new SevenWondersCard();
